@@ -8,7 +8,9 @@ Your page will be built based on a random combination of cuisine, city, and desi
 
 ## Your team's combination: Pizza restaurants in Dublin, Ireland
 
-Your team has been tasked with using the Zomato API to list Pizza restaurants in Dublin, Ireland
+Your team has been tasked with using the Zomato API to list Pizza restaurants in Dublin, Ireland in the style of the Deliveroo site:
+
+![Deliveroo](https://i.imgur.com/GHFJy1k.png)
 
 ## How to complete this task
 
@@ -68,13 +70,7 @@ Make it so your users can choose to only show restaurants with good ratings.
 
 To work on mobile, desktop or tablet. 
 
-Feel free to challenge yourself and team to come up with more or other features! This is your group project – you decided. 
-
-### Feature freeze 
-
-There's a thing called [feature freeze.](https://en.wikipedia.org/wiki/Freeze_(software_engineering)), our feature freeze will be 2 hours before the demo. That's when it's time for you to merge your feature branches into the master branch. Our teachers will have a bit of a though time, since it's guaranteed there will be conflicts in your code (which happens when the same code is edited in two different branches). So expect merge conflicts at this point!
-
-Once all the feature branches are merged into master, you're free to try and make smaller changes to your site and fix bugs - but be careful to make sure it'll be demoable. 
+Feel free to challenge yourself and team to come up with more or other features! This is your group project – you decide.
 
 Work as a team!  
 
