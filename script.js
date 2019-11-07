@@ -15,9 +15,20 @@ fetch(
   .then(json => {
     console.log(json);
     json.restaurants.forEach(resto => {
+      console.log(resto.restaurant.thumb);
       document.getElementById(
         "restaurantList"
-      ).innerHTML += `<li>${resto.restaurant.name}</li> <p>${resto.restaurant.location.address}</p><p>${resto.restaurant.average_cost_for_two} €</p> <img src="${resto.restaurant.thumb}"><p>${resto.restaurant.user_rating.aggregate_rating}</p><p>${resto.restaurant.user_rating.rating_text}</p>`;
+      ).innerHTML += `<div class="restaurant-card">
+        <div class="card-img">
+          <img src="${resto.restaurant.thumb}">
+        </div>
+        <div class="card-info">
+          <li><h2>${resto.restaurant.name}</h2></li>
+          <p>	&#9733; ${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</p>
+          <p>${resto.restaurant.location.address}</p>
+          <p>€${resto.restaurant.average_cost_for_two}</p>
+        </div>
+      </div>`;
     });
   })
   .catch(err => {
