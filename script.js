@@ -17,7 +17,7 @@ fetch(
     json.restaurants.forEach(resto => {
       document.getElementById(
         "restaurantList"
-      ).innerHTML += `<li>${resto.restaurant.name} ${}</li>`;
+      ).innerHTML += `<li>${resto.restaurant.name}</li>`;
     });
   })
   .catch(err => {
