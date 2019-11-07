@@ -16,18 +16,9 @@ const filterPriceRange = () => {
 	const priceRangeLow = parseInt(priceRange[0]);
 	const priceRangeHigh = parseInt(priceRange[1]);
 
-	// console.log(priceRangeLow, priceRangeHigh);
-
 	const tempArray = restoArray.map(item => {
 		return item.restaurant;
 	});
-
-	// const filteredArray = tempArray.filter(item => {
-	// 	return (
-	// 		item.average_cost_for_two <= priceRangeHigh &&
-	// 		item.average_cost_for_two >= priceRangeLow
-	// 	);
-	// });
 
 	filteredCuisines = tempArray.filter(item => {
 		return (
@@ -37,6 +28,4 @@ const filterPriceRange = () => {
 	});
 
 	console.log(filteredCuisines);
-
-	// return filteredArray;
 };
