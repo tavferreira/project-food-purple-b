@@ -4,8 +4,6 @@ form.addEventListener("submit", e => {
 	e.preventDefault();
 	filterPriceRange();
 
-	document.getElementById("restaurantList").innerHTML = "";
-
 	displayUI(filteredCuisines);
 });
 
