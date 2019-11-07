@@ -17,7 +17,7 @@ fetch(
     json.restaurants.forEach(resto => {
       document.getElementById(
         "restaurantList"
-      ).innerHTML += `<li>${resto.restaurant.name}</li>`;
+      ).innerHTML += `<li>${resto.restaurant.name}</li> <p>${resto.restaurant.location.address}</p><p>${resto.restaurant.average_cost_for_two} €</p> <img src="${resto.restaurant.thumb}"><p>${resto.restaurant.user_rating.aggregate_rating}</p><p>${resto.restaurant.user_rating.rating_text}</p>`;
     });
   })
   .catch(err => {
