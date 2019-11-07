@@ -5,6 +5,9 @@ const cityId = 91; // Dublin
 const cityDescription = "Dublin";
 const cuisineId = 82; // Pzza
 const cuisineDescription = "Pizza";
+
+let restoArray;
+
 fetch(
   `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&cuisines=${cuisineId}`,
   { headers: { "user-key": apiKey } }
@@ -13,7 +16,10 @@ fetch(
     return response.json();
   })
   .then(json => {
-    console.log(json);
+    restoArray = json.restaurants;
+
+    console.log(restoArray);
+
     json.restaurants.forEach(resto => {
       document.getElementById(
         "restaurantList"
