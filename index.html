@@ -9,9 +9,9 @@
 	</head>
 	<body>
 		<h1>Pizza in Dublin</h1>
-		<form id="filterPrice">
+		<form id="filter">
 			<p>Filter restaurants by price</p>
-			<select name="prices" form="filterPrice">
+			<select id="priceRanges" name="prices" form="filterPrice">
 				<option value="0-20">0-20€</option>
 				<option value="20-40">20-40€</option>
 				<option value="40-60">40-60€</option>
@@ -22,6 +22,7 @@
 		</form>
 		<ul id="restaurantList"></ul>
 
+		<script src="displayHTML.js"></script>
+		<script src="filter.js"></script>
 		<script src="script.js"></script>
-	</body>
 </html>
