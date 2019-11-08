@@ -10,7 +10,7 @@ const displayUI = data => {
 			return `<p>${review.review.review_text}</p>`;
 		});
 
-		console.log(reviewTemplates);
+		// console.log(reviewTemplates);
 
 		document.getElementById("restaurantList").innerHTML += `
         <li>
@@ -20,7 +20,11 @@ const displayUI = data => {
           <img src="${restaurant.thumb}">
           <p>${restaurant.user_rating.aggregate_rating}</p>
           <p>${restaurant.user_rating.rating_text}</p>
-          <div>${reviewTemplates}</div>
+          <div>${reviewTemplates
+						.forEach(item => {
+							return item;
+						})
+						.join("")}</div>
         </li>
         `;
 	});
