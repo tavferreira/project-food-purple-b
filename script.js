@@ -9,12 +9,19 @@ let filteredCuisines = [];
 
 let restoArray = [];
 
+const print = restos => {
+  console.log(restos)
+  restos.forEach(resto => {
+    document.getElementById(
+      "restaurantList"
+    ).innerHTML += `<li>${resto.restaurant.name}</li> <p>${resto.restaurant.location.address}</p><p>${resto.restaurant.average_cost_for_two} €</p> <img src="${resto.restaurant.thumb}"><p>${resto.restaurant.user_rating.aggregate_rating}</p><p>${resto.restaurant.user_rating.rating_text}</p>`;
+  });
+}
+
 fetch(
 	`https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&cuisines=${cuisineId}`,
 	{ headers: { "user-key": apiKey } }
-)
-
-	.then(response => {
+).then(response => {
 		return response.json();
 	})
 	.then(json => {
@@ -45,4 +52,3 @@ fetch(
 	});
 
 // console.log("Restoarray", restoArray);
-
