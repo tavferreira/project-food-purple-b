@@ -22,6 +22,7 @@ const displayUIfiltered = data => {
 	document.getElementById("restaurantList").innerHTML = "";
 
 	data.forEach(restaurant => {
+		console.log(restaurant);
 		document.getElementById(
 			"restaurantList"
 		).innerHTML += `<div class="restaurant-card">

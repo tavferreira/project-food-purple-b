@@ -9,13 +9,13 @@ let filteredCuisines = [];
 
 let restoArray = [];
 
-
 fetch(
 	`https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&cuisines=${cuisineId}`,
 	{ headers: { "user-key": apiKey } }
-).then(response => {
-	return response.json();
-})
+)
+	.then(response => {
+		return response.json();
+	})
 	.then(json => {
 		restoArray = json.restaurants;
 
@@ -24,4 +24,3 @@ fetch(
 	.catch(err => {
 		return err;
 	});
-
