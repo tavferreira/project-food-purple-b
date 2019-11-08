@@ -1,6 +1,5 @@
 const filterOnReviews = (restos, rating) => {
 	let newArray = restos.filter(function(rest) {
-		console.log(rest.user_rating.rating_text + " " + rating);
 		return rest.user_rating.rating_text === rating;
 	});
 
