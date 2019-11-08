@@ -3,8 +3,7 @@ const form = document.getElementById("filter");
 form.addEventListener("submit", e => {
 	e.preventDefault();
 	filterPriceRange();
-
-	displayUI(filteredCuisines);
+	displayUIfiltered(filteredCuisines);
 });
 
 const filterPriceRange = () => {
@@ -24,6 +23,4 @@ const filterPriceRange = () => {
 			item.average_cost_for_two >= priceRangeLow
 		);
 	});
-
-	console.log(filteredCuisines);
 };
