@@ -55,5 +55,4 @@ const filterPriceRange = () => {
 		);
 	});
 
-	console.log(filteredCuisines);
 };

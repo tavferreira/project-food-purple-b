@@ -1,11 +1,11 @@
 const displayUI = data => {
-	document.getElementById("restaurantList").innerHTML = "";
+  document.getElementById("restaurantList").innerHTML = "";
 
-	data.forEach(restaurant => {
-		document.getElementById(
-			"restaurantList"
-		).innerHTML += `<div class="restaurant-card">
-    <div class="card-img" style="width: 200px; height: 150px; background-image: url(${restaurant.restaurant.thumb})">
+  data.forEach(restaurant => {
+    document.getElementById(
+      "restaurantList"
+    ).innerHTML += `<div class="restaurant-card">
+    <div class="card-img" style="background-image: url(${restaurant.restaurant.thumb})">
     
     <div class="bubble">€${restaurant.restaurant.average_cost_for_two}</div>
     </div>
@@ -15,17 +15,18 @@ const displayUI = data => {
     <p>${restaurant.restaurant.location.address}</p>
     </div>
     </div>`;
-	});
+  });
 };
 
 const displayUIfiltered = data => {
-	document.getElementById("restaurantList").innerHTML = "";
-
-	data.forEach(restaurant => {
-		document.getElementById(
-			"restaurantList"
-		).innerHTML += `<div class="restaurant-card">
-    <div class="card-img" style="width: 200px; height: 150px; background-image: url(${restaurant.thumb})">
+  document.getElementById("restaurantList").innerHTML = "";
+  numbers = data.length
+  document.getElementById("restaurant-number").innerHTML = `${numbers} restaurants is filtered`
+  data.forEach(restaurant => {
+    document.getElementById(
+      "restaurantList"
+    ).innerHTML += `<div class="restaurant-card">
+    <div class="card-img" style="background-image: url(${restaurant.thumb})">
     
     <div class="bubble">€${restaurant.average_cost_for_two}</div>
     </div>
@@ -35,5 +36,5 @@ const displayUIfiltered = data => {
     <p>${restaurant.location.address}</p>
     </div>
     </div>`;
-	});
+  });
 };
