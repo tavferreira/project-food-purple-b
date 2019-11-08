@@ -27,7 +27,6 @@ const displayUIfiltered = data => {
       "restaurantList"
     ).innerHTML += `<div class="restaurant-card">
     <div class="card-img" style="background-image: url(${restaurant.thumb})">
-    
     <div class="bubble">€${restaurant.average_cost_for_two}</div>
     </div>
     <div class="card-info">
