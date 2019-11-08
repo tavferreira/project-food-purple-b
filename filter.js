@@ -7,8 +7,8 @@ const filterOnReviews = (restos, rating) => {
 }
 
 const compare = (a, b) => {
-	const restA = a.restaurant.average_cost_for_two;
-	const restB = b.restaurant.average_cost_for_two;
+	const restA = a.average_cost_for_two;
+	const restB = b.average_cost_for_two;
 
 	let compare = 0;
 	if (restA > restB) {
@@ -29,6 +29,10 @@ const form = document.getElementById("filter");
 form.addEventListener("submit", e => {
 	e.preventDefault();
 	filterPriceRange();
+
+	if (document.getElementById("sortByPrice").checked) {
+		sortByPrice(filteredCuisines)
+	}
 
 	displayUIfiltered(filteredCuisines);
 });
