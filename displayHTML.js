@@ -2,30 +2,38 @@ const displayUI = data => {
 	document.getElementById("restaurantList").innerHTML = "";
 
 	data.forEach(restaurant => {
-		let lastReviews = restaurant.all_reviews.reviews.splice(0, 3);
+		document.getElementById(
+			"restaurantList"
+		).innerHTML += `<div class="restaurant-card">
+    <div class="card-img" style="width: 200px; height: 150px; background-image: url(${restaurant.restaurant.thumb})">
+    
+    <div class="bubble">€${restaurant.restaurant.average_cost_for_two}</div>
+    </div>
+    <div class="card-info">
+    <li><h2>${restaurant.restaurant.name}</h2></li>
+    <p class="card-rating">	&#9733; ${restaurant.restaurant.user_rating.aggregate_rating} ${restaurant.restaurant.user_rating.rating_text}</p>
+    <p>${restaurant.restaurant.location.address}</p>
+    </div>
+    </div>`;
+	});
+};
 
-		console.log(lastReviews);
+const displayUIfiltered = data => {
+	document.getElementById("restaurantList").innerHTML = "";
 
-		const reviewTemplates = lastReviews.map(review => {
-			return `<p>${review.review.review_text}</p>`;
-		});
-
-		// console.log(reviewTemplates);
-
-		document.getElementById("restaurantList").innerHTML += `
-        <li>
-          <p>${restaurant.name}</p>
-          <p>${restaurant.location.address}</p>
-          <p>${restaurant.average_cost_for_two} €</p>
-          <img src="${restaurant.thumb}">
-          <p>${restaurant.user_rating.aggregate_rating}</p>
-          <p>${restaurant.user_rating.rating_text}</p>
-          <div>${reviewTemplates
-						.forEach(item => {
-							return item;
-						})
-						.join("")}</div>
-        </li>
-        `;
+	data.forEach(restaurant => {
+		document.getElementById(
+			"restaurantList"
+		).innerHTML += `<div class="restaurant-card">
+    <div class="card-img" style="width: 200px; height: 150px; background-image: url(${restaurant.thumb})">
+    
+    <div class="bubble">€${restaurant.average_cost_for_two}</div>
+    </div>
+    <div class="card-info">
+    <li><h2>${restaurant.name}</h2></li>
+    <p class="card-rating">	&#9733; ${restaurant.user_rating.aggregate_rating} ${restaurant.user_rating.rating_text}</p>
+    <p>${restaurant.location.address}</p>
+    </div>
+    </div>`;
 	});
 };
