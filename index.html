@@ -12,44 +12,66 @@
 		<title>Purple Pizza in Dublin</title>
 	</head>
 
-	<body>
-		<h1>Pizza in Dublin</h1>
-		<section class="restaurant-container">
-			<nav class="nav-filter">
-				<form id="filter">
-					<p>Filter restaurants by price</p>
-					<label>
-						Price
-						<select id="priceRanges" name="prices" form="filterPrice">
-							<option value="0-100">-</option>
-							<option value="0-20">0-20€</option>
-							<option value="20-40">20-40€</option>
-							<option value="40-60">40-60€</option>
-							<option value="60-80">60-80€</option>
-							<option value="80-100">80-100€</option>
-						</select>
-					</label>
-					<label>
-						Reviews
-						<select id="reviewRanges" name="review" form="filterReview">
-							<option value="no-review">-</option>
-							<option value="Good">Good</option>
-							<option value="Very Good">Very good</option>
-						</select>
-					</label>
-					<label>
-						Sort by price
-						<input type="checkbox" id="sortByPrice" value="Sort by price" />
-					</label>
-					<input id="priceSubmit" type="submit" value="Apply Filter" />
-				</form>
-			</nav>
-			<ul class="restaurant-list" id="restaurantList"></ul>
-		</section>
+<body>
+  <header>
+    <img src="pizza.png">
+    <h1>Pizza in Dublin</h1>
+  </header>
 
-		<script src="displayHTML.js"></script>
-		<script src="filter.js"></script>
-		<script src="script.js"></script>
-		<script src="filter.js"></script>
-	</body>
+  <section class="restaurant-container">
+    <div class="form-filter">
+      <form id="filter">
+        <h2>Filter restaurants</h2>
+
+        <div class="filter-containers">
+          <label>
+            Price
+            <select id="priceRanges" name="prices" form="filterPrice">
+              <option value="0-100">-</option>
+              <option value="0-20">€0-20</option>
+              <option value="20-40">€20-40</option>
+              <option value="40-60">€40-60</option>
+              <option value="60-80">€60-80</option>
+              <option value="80-100">€80-100</option>
+            </select>
+          </label>
+
+          <label>
+            Reviews
+            <select id="reviewRanges" name="review" form="filterReview">
+              <option value="no-review">-</option>
+              <option value="good">Good</option>
+              <option value="verygood">Very good</option>
+            </select>
+          </label>
+
+          <label>
+            Sort by price
+            <input type="checkbox" id="sortByPrice" value="Sort by price" />
+          </label>
+        </div>
+
+        <input class="btn" id="priceSubmit" type="submit" value="Apply" />
+
+      </form>
+
+      <div id="restaurant-number"></div>
+
+    </div>
+
+    <ul class="restaurant-list" id="restaurantList"></ul>
+  </section>
+
+  <footer>&copy; Purple rain 2019
+    <div>
+      <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Icons made by Freepik from www.flaticon.com</a>
+    </div>
+  </footer>
+
+  <script src="displayHTML.js"></script>
+  <script src="filter.js"></script>
+  <script src="script.js"></script>
+  <script src="filter.js"></script>
+</body>
+
 </html>

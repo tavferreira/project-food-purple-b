@@ -5,6 +5,8 @@ const cityId = 91; // Dublin
 const cityDescription = "Dublin";
 const cuisineId = 82; // Pzza
 const cuisineDescription = "Pizza";
+let numbers = 0
+console.log(numbers)
 let filteredCuisines = [];
 
 let restoArray = [];
@@ -20,6 +22,7 @@ fetch(
 		restoArray = json.restaurants;
 
 		displayUI(restoArray);
+
 	})
 	.catch(err => {
 		return err;
