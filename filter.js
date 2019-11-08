@@ -1,29 +1,10 @@
-const form = document.getElementById("filter");
+const filterOnReviews = (restos, rating) => {
+  let newArray = restos.filter(function(rest) {
+    return rest.restaurant.user_rating.rating_text === rating;
+  });
 
-form.addEventListener("submit", e => {
-	e.preventDefault();
-	filterPriceRange();
-	displayUIfiltered(filteredCuisines);
-});
-
-const filterPriceRange = () => {
-	const priceRangeElement = document.getElementById("priceRanges").value;
-
-	const priceRange = priceRangeElement.split("-");
-	const priceRangeLow = parseInt(priceRange[0]);
-	const priceRangeHigh = parseInt(priceRange[1]);
-
-	const tempArray = restoArray.map(item => {
-		return item.restaurant;
-	});
-
-	filteredCuisines = tempArray.filter(item => {
-		return (
-			item.average_cost_for_two <= priceRangeHigh &&
-			item.average_cost_for_two >= priceRangeLow
-		);
-	});
-};
+  return newArray;
+}
 
 const compare = (a,b) => {
     const restA = a.restaurant.average_cost_for_two;

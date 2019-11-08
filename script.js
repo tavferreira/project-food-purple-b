@@ -10,7 +10,6 @@ let filteredCuisines = [];
 let restoArray = [];
 
 const print = restos => {
-  console.log(restos)
   restos.forEach(resto => {
     document.getElementById(
       "restaurantList"
