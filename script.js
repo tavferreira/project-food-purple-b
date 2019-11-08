@@ -26,28 +26,9 @@ fetch(
 	.then(json => {
 		restoArray = json.restaurants;
 
-		console.log(filteredCuisines);
-
-		restoArray.forEach(item => {
-			const { restaurant } = item;
-			console.log(restaurant);
-			document.getElementById(
-				"restaurantList"
-			).innerHTML += `<div class="restaurant-card">
-        <div class="card-img" style="width: 200px; height: 150px; background-image: url(${resto.restaurant.thumb})">
-          
-          <div class="bubble">€${resto.restaurant.average_cost_for_two}</div>
-        </div>
-        <div class="card-info">
-          <li><h2>${resto.restaurant.name}</h2></li>
-          <p class="card-rating">	&#9733; ${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</p>
-          <p>${resto.restaurant.location.address}</p>
-        </div>
-      </div>`;
-		});
+		displayUI(restoArray);
 	})
 	.catch(err => {
 		return err;
 	});
 
-// console.log("Restoarray", restoArray);
