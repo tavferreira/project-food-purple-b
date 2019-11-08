@@ -26,7 +26,7 @@ fetch(
   .then(json => {
     restoArray = json.restaurants;
 
-    restoArray = filterOnReviews(restoArray);
+    restoArray = filterOnReviews(restoArray, "Very Good");
     print(restoArray);
   })
   .catch(err => {
