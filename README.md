@@ -1,8 +1,6 @@
-This was the third project of the second sprint on the Technigo Frontend Bootcamp, which was focused on JavaScript. 
-
 ## 1. What is this?
 
-This project was built during our second meet up and it was a team project. The team, composed by 7 elements, was split into 3 sub-groups and each sub-groups had a different task. In the end we had to merge our code together and deal with merging conflicts.
+This project was built during meet up and it was a team project. The team, composed by 7 elements, was split into 3 sub-groups and each sub-groups had a different task. In the end we had to merge our code together and deal with merging conflicts.
 
 The purpose of this project was to build a food review site that would show Pizza restaurants in Dublin, Ireland.
 
